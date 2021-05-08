@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="Urun"
+            type="com.example.ayagini_yorganina_gore_uzat.room_database.Urun" />
+        <variable
+            name="Converted_price"
+            type="String" />
+        <variable
+            name="listener"
+            type="com.example.ayagini_yorganina_gore_uzat.room_database.ISil" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".fragment.Detay">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_marginVertical="10dp"
+            android:layout_height="250dp"
+            android:src="@drawable/ic_baseline_device_unknown_24"
+             />
+
+        <TextView
+            android:id="@+id/aciklama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/aladin"
+            android:text="@{Urun.aciklama}"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tutar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{Converted_price}"
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:onClick="@{listener::onSilClicked}"
+            android:text="Sil" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

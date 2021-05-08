@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/giris">
+
+    <fragment
+        android:id="@+id/giris"
+        android:name="com.example.ayagini_yorganina_gore_uzat.fragment.Giris"
+        android:label="fragment_giris"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_giris_to_ekle"
+            app:destination="@id/ekle" />
+        <action
+            android:id="@+id/action_giris_to_detay"
+            app:destination="@id/detay" />
+        <action
+            android:id="@+id/action_giris_to_isimDegistir"
+            app:destination="@id/isimDegistir" />
+    </fragment>
+    <fragment
+        android:id="@+id/detay"
+        android:name="com.example.ayagini_yorganina_gore_uzat.fragment.Detay"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <action
+            android:id="@+id/action_detay_to_giris"
+            app:destination="@id/giris" />
+        <argument
+            android:name="current_urun"
+            app:argType="com.example.ayagini_yorganina_gore_uzat.room_database.Urun" />
+        <argument
+            android:name="birim"
+            app:argType="string" />
+        <argument
+            android:name="tutar"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/ekle"
+        android:name="com.example.ayagini_yorganina_gore_uzat.fragment.Ekle"
+        android:label="fragment_ekle"
+        tools:layout="@layout/fragment_ekle" >
+        <action
+            android:id="@+id/action_ekle_to_giris"
+            app:destination="@id/giris" />
+    </fragment>
+    <fragment
+        android:id="@+id/isimDegistir"
+        android:name="com.example.ayagini_yorganina_gore_uzat.fragment.IsimDegistir"
+        android:label="fragment_isim_degistir"
+        tools:layout="@layout/fragment_isim_degistir" >
+        <action
+            android:id="@+id/action_isimDegistir_to_giris"
+            app:destination="@id/giris" />
+    </fragment>
+</navigation>
