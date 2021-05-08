@@ -1,3 +1,5 @@
+# HAZIR OLUŞTURULMUŞ APK DOSYASINA LİNKTEN RAHATLIKLA ULAŞABİLİRSİNİZ
+[app-debug.zip](https://github.com/race46/android-bootcamp-harcama-takip/files/6446474/app-debug.zip)
 # android-bootcamp-harcama-takip
 ## gdg icin hazrilanmis bitirme projesi
 Uygulamamız harcamalarımızı takip edip kalan paramızı sürekli kontrol altında tutmak için tasarlandı. 
